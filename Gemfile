@@ -1,10 +1,8 @@
 source 'https://rubygems.org'
-
+ruby "2.0.0"
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.1.5'
-# Use sqlite3 as the database for Active Record
-gem 'sqlite3'
 # Use SCSS for stylesheets
 gem 'sass-rails', '~> 4.0.3'
 # Use Uglifier as compressor for JavaScript assets
@@ -25,8 +23,20 @@ gem 'bootstrap-sass', '~> 3.3.3'
 #image uploader
 gem "paperclip", "~> 4.2"
 # bundle exec rake doc:rails generates the API under doc/api.
-gem 'sdoc', '~> 0.4.0',          group: :doc
 
+group :production do 
+	gem 'pg' 
+	gem 'rails_12factor'
+end
+
+group :development, :test do
+	# Use sqlite3 as the database for Active Record
+	gem 'sqlite3'
+end
+
+group :doc do
+	gem 'sdoc', require: false
+end         
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
 
