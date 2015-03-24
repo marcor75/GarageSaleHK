@@ -24,7 +24,10 @@ gem 'bootstrap-sass', '~> 3.3.3'
 gem "paperclip", "~> 4.2"
 # bundle exec rake doc:rails generates the API under doc/api.
 gem "paperclip-dropbox", ">= 1.1.7"
+# 
 gem "figaro"
+# enable multiple user accounts, sign-in, sign-on w/ options
+gem 'devise'
 
 group :production do 
 	gem 'pg' 
