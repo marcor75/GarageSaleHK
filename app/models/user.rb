@@ -5,5 +5,9 @@ class User < ActiveRecord::Base
          :recoverable, :rememberable, :trackable, :validatable
 
   # check that user field is not left blank:
-  validates :name, presence:true
+  validates :name, presence: true
+
+  #defining the relationship user to listings db; listings' existence depends on user's existence 
+  # i.e. if user profile has been deleted, listings are automatically deleted too
+  has_many :listings, dependent: :destroy
 end

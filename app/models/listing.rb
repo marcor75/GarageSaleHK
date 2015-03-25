@@ -14,4 +14,7 @@ class Listing < ActiveRecord::Base
 	# checking file selected for upload is an image - 2 methods:
 	validates_attachment_content_type :image, :content_type => /\Aimage\/.*\Z/
 	#validates_attachment_content_type :image, content_type: %w(image/jpeg image/jpg image/png)			
+
+	#defining the relationship listing to users db
+	belongs_to :user
 end
