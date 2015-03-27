@@ -5,8 +5,8 @@ class ListingsController < ApplicationController
   # making actions available only to currently signed in user; check_user function defined at end of page
   before_filter :check_user, only: [:edit, :update, :destroy]
 
-# below sets @listing instance variable to different sets of listings:
-
+# below sets @listing instance variable to different sets of listings, depending on scenario:
+  
   # sets @listings to those that BELONG to the currently signed in user
   def seller
     @listings = Listing.where(user: current_user).order("created_at DESC")
