@@ -13,16 +13,3 @@
  *= require_tree .
  *= require_self
  */
-
-/*.form-group {
-	width: 60%;
-	margin: 0 auto;
-}
-
-.btn-primary {
-	background-color: goldenrod;
-}
-
-.btn-primary:hover{
-	background-color: red;
-}*/
