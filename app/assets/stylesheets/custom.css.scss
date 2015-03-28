@@ -24,6 +24,19 @@ body {
   	color: #0192B5;
 }
 
+.jumbotron{
+  background-image: url('banner.green1400x450.jpg');
+  h1, h2 {
+    font-family: pusab, georgia, serif;
+    color: #d5641c;
+  }
+  h2{
+    text-align: right;
+  }
+  
+}
+
+
 .center {
 	text-align: center;
 }
