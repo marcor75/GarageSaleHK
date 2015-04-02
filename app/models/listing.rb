@@ -17,4 +17,5 @@ class Listing < ActiveRecord::Base
 
 	#defining the relationship listing to users db
 	belongs_to :user
+	has_many :orders
 end
