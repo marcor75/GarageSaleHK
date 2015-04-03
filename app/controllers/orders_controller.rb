@@ -5,19 +5,19 @@ class OrdersController < ApplicationController
 
   respond_to :html, :xml, :json 
 
-  def index
-    @orders = Order.all
- end
-
-  def show
+  def sales
+    @orders = Order.all.where(seller: current_user).order("created_at DESC")
   end
 
+  def purchases
+    @orders = Order.all.where(buyer: current_user).order("created_at DESC")
+  end
+
+  # index, show, edit, update deleted to prevent user from changing order history;
+  # delete commented out for now, in case want to include a delete function at a later stage
   def new
     @order = Order.new
     @listing = Listing.find(params[:listing_id])
-  end
-
-  def edit
   end
 
   def create
@@ -46,11 +46,8 @@ class OrdersController < ApplicationController
     end
   end
 
-  def update
-  end
-
-  def destroy
-  end
+  # def destroy
+  # end
 
   
   private
