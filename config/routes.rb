@@ -1,19 +1,23 @@
 Rails.application.routes.draw do
   
-  devise_for :users
-  resources :listings do
-    resources :orders, only: [:new, :create] 
+  # enclose all routes for internationalization
+  scope "(:locale)", locale: /en|de/ do
+    
+    devise_for :users
+    resources :listings do
+      resources :orders, only: [:new, :create] 
+    end
+
+    get 'pages/about'
+    get 'pages/contact'
+    # cleaning up URLs below (custom routes): 
+    get 'seller' => "listings#seller"
+    get 'sales' => "orders#sales"
+    get 'purchases' => "orders#purchases"
+
+    # defines HOME page
+    root "listings#index"
   end
-
-  get 'pages/about'
-  get 'pages/contact'
-  get 'seller' => "listings#seller"
-  get 'sales' => "orders#sales"
-  get 'purchases' => "orders#purchases"
-
-  # defines HOME page
-  root "listings#index"
-
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 

@@ -1,8 +1,8 @@
 class ListingsController < ApplicationController
   before_action :set_listing, only: [:show, :edit, :update, :destroy]
-  #checking if user is signed in, before permitting access to the actions on the right
+  #checking if user is signed in, before permitting access to the actions on the right; method defined by Devise(?)
   before_filter :authenticate_user!, only: [:seller, :new, :create, :edit, :update, :destroy]
-  # making actions available only to currently signed in user; check_user function defined at end of page
+  # making actions available only to currently signed in user; check_user function defined at end of page ard. line 89
   before_filter :check_user, only: [:edit, :update, :destroy]
 
 # below sets @listing instance variable to different sets of listings, depending on scenario:
@@ -15,7 +15,7 @@ class ListingsController < ApplicationController
   # GET /listings
   # GET /listings.json
   def index
-    @listings = Listing.all.order("created_at DESC")
+    @listings = Listing.all.order("created_at DESC").paginate(:page => params[:page], :per_page => 4)
   end
 
   # GET /listings/1
@@ -68,7 +68,7 @@ class ListingsController < ApplicationController
   def destroy
     @listing.destroy
     respond_to do |format|
-      format.html { redirect_to listings_url, notice: 'Listing was successfully destroyed.' }
+      format.html { redirect_to listings_url, notice: 'Listing was successfully deleted.' }
       format.json { head :no_content }
     end
   end
@@ -85,8 +85,18 @@ class ListingsController < ApplicationController
     end
 
     def check_user 
+      # current_user is Devise method
       if current_user != @listing.user
         redirect_to root_url, alert: "Sorry, this listing belongs to someone else"
       end
-    end  
+    end 
+
+    # alternate syntax; codeschool docs, p.104
+    #  def check_user 
+    #   if current_user != @listing.user
+    #     flash[:notice] = "Sorry, this listing belongs to someone else"
+    #     redirect_to root_url 
+    #   end
+    # end 
+ 
 end

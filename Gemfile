@@ -24,10 +24,14 @@ gem 'bootstrap-sass', '~> 3.3.3'
 gem "paperclip", "~> 4.2"
 # bundle exec rake doc:rails generates the API under doc/api.
 gem "paperclip-dropbox", ">= 1.1.7"
-# 
+# protecting sensitive account data, by not adding them to github / heroku pushes
 gem "figaro"
 # enable multiple user accounts, sign-in, sign-on w/ options
 gem 'devise'
+# title says it all...
+gem 'will_paginate', '~> 3.0'
+# same same, but different...
+gem 'will_paginate-bootstrap'
 
 group :production do 
 	gem 'pg' 
