@@ -1,5 +1,7 @@
 Rails.application.routes.draw do
-  
+  # resources are created by g scaffold 
+  # resources :categories
+
   # enclose all routes for internationalization
   scope "(:locale)", locale: /en|de/ do
     
@@ -17,6 +19,7 @@ Rails.application.routes.draw do
 
     # defines HOME page
     root "listings#index"
+
   end
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".

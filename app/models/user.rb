@@ -10,6 +10,6 @@ class User < ActiveRecord::Base
   #defining the relationship user to listings db; listings' existence depends on user's existence 
   # i.e. if user profile has been deleted, listings are automatically deleted too
   has_many :listings, dependent: :destroy
-  has_many :sales, class_name: "Order", foreign_key: "seller_id"
-  has_many :purchases, class_name: "Order", foreign_key: "buyer_id"
+  has_many :sales, class_name: "Order", foreign_key: "seller_id" #?, dependent: :destroy
+  has_many :purchases, class_name: "Order", foreign_key: "buyer_id" #?, dependent: :destroy
 end

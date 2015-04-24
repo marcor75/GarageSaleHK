@@ -1,0 +1,26 @@
+/*// Place all the styles related to the Listings controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/*/
+
+.newListingLink{
+	display: inline-block;
+	float: right;
+	font-weight: bold;
+	margin-top: 0;
+}
+
+.pagination{
+	float: right;
+}
+
+.caption a:hover{
+	background-color: #fff;
+	color: teal;
+	font-weight: bold;
+}
+
+.caption a:visited{
+	color: #000;
+}
+
+

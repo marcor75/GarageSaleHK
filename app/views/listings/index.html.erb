@@ -9,12 +9,13 @@
       <div class="col-md-3">
         <div class="thumbnail">
           <div class ="img_container">
-            <%= link_to image_tag(listing.image.url), listing %>
+            <!-- link  <img src="(url from PAPERCLIP docs)", href  -->
+            <%= link_to image_tag(listing.image.url(:medium)), listing %>
           </div>
           <div class="caption">
           <h3><%= listing.name %></h3>
           <p><%= number_to_currency(listing.price) %></p> 
-          <p><%= t('sold_by', user: listing.user.name) %></p>
+          <p><a href="#"><%= t('sold_by', user: listing.user.name) %></a></p>
           </div>
         </div>
       </div>  
