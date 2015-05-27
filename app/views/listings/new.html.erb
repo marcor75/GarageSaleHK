@@ -1,5 +1,7 @@
 <h1>New listing</h1>
 
+<!-- if user.role != seller render 'seller registration' else render 'form': 
+create partial '_seller_registration.html.erb':form for bank/paypal details, checkbox to accept terms(optional)  -->
 <%= render 'form' %>
 
 <%= link_to 'Back', listings_path, class: "btn btn-link" %>

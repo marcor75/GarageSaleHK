@@ -1,7 +1,7 @@
 class OrdersController < ApplicationController
   before_action :set_order, only: [:show, :edit, :update, :destroy]
   # authenticate_user is a Devise keyword
-  before_action :authenticate_user!
+  before_action :authenticate_user! #,except: [:new, :create] // to allow buy now! w/o login
 
   respond_to :html, :xml, :json 
 

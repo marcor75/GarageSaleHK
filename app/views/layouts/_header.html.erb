@@ -3,7 +3,7 @@
     <!-- Brand and toggle get grouped for better mobile display -->
     <div class="navbar-header">
       <!-- <a class="navbar-brand" href="/">EtzyDemo</a> HTML LINKS NEED TO BE REPLACED BY RAILS LINK HELPER TO ENABLE i18n -->
-     <%= link_to "EtzyDemo", root_path, class: "navbar-brand" %>
+     <%= link_to "Garage Sale HK", root_path, class: "navbar-brand" %>
     </div>
 
     <!-- Collect the nav links, forms, and other content for toggling -->
@@ -12,17 +12,17 @@
         <li><%= link_to t('navbar.about'), pages_about_path %></li>
         <li><%= link_to t('navbar.contact'), pages_contact_path %></li>
         <li class="dropdown">
-            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Browse<span class="caret"></span></a>
+            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false"><%= t('navbar.category_select') %><span class="caret"></span></a>
             <ul class="dropdown-menu" role="menu">
-              <% Category.all.order("name").each do |category| %>
+              <% Category.all.order('name').each do |category| %>
                 <li><%= link_to category.name, listings_path(category: category.name) %></li>
               <% end %>
             </ul>
           </li>
       </ul>  
-
+<!-- add conditional so regular users see "open seller acct."-link to profile and bank detail form -->
       <ul class="nav navbar-nav navbar-right">  
-        <% if user_signed_in? #(Devise method) %> 
+        <% if user_signed_in? #(Devise method) && user.role == seller %> 
           <li class="dropdown">
             <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false"><%= t('navbar.seller_account') %><span class="caret"></span></a>
             <ul class="dropdown-menu" role="menu">

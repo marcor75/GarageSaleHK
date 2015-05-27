@@ -26,6 +26,6 @@
  <%= will_paginate @posts, renderer: BootstrapPagination::Rails %>
 
 
-<% if (user_signed_in?) %>
-  <%= link_to t('new_listing'), new_listing_path, class: "btn btn-default" %>
+<% if (user_signed_in?) %> 
+  <%= link_to t('new_listing'), new_listing_path, class: "btn btn-default newListingBtn" %>
 <% end %> 

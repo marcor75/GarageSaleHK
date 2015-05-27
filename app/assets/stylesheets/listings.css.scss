@@ -9,18 +9,23 @@
 	margin-top: 0;
 }
 
+.newListingBtn{
+	margin: 15px 0;
+}
+
 .pagination{
 	float: right;
+	li a {
+		color: #01667F;
+	}
 }
 
 .caption a:hover{
 	background-color: #fff;
-	color: teal;
+	color: #01667F;
 	font-weight: bold;
 }
 
 .caption a:visited{
 	color: #000;
 }
-
-

@@ -13,14 +13,13 @@
    <p><%= @listing.description %></p>
    <p><%= number_to_currency(@listing.price) %></p>
    <br>
-   <div class="center">
-   <!--  path from 'rake routes'; @listing is a rails shortcut that refers to current listing-->
-   <%= link_to "Buy Now", new_listing_order_path(@listing), class: "btn btn-primary" %> 
+   <div>
+   <%= mail_to @listing.user.email, t("contact_seller"), class: "btn btn-primary"  %> 
    </div> 
   </div>
 </div> 
 
 <% if(current_user == @listing.user) %>
-  <%= link_to 'Edit', edit_listing_path(@listing), class: "btn btn-link" %> |
+  <%= link_to t('edit'), edit_listing_path(@listing), class: "btn btn-link" %> |
 <% end %>
-<%= link_to 'Back', listings_path, class: "btn btn-link" %>
+<%= link_to t('back'), listings_path, class: "btn btn-link" %>

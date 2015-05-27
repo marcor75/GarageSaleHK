@@ -2,17 +2,23 @@ de:
   navbar:
     about: Über uns
     contact: Kontakt
+    category_select: Stöbern
+    category_order: created_at
+    category_name: category.created_at
     sign_up: Registrieren
     sign_in: Anmelden
     seller_account: Verkäufer Konto
-    manage_listings: Einträge ändern
+    manage_listings: Anzeigen bearbeiten
     sales_history: Verkäufe
     shopping_history: Käufe
     edit_profile: Profil ändern
     sign_out: Abmelden
-  jumbotron_title: Willkommen auf ED Markt!
-  jumbotron_subtitle: Entdecke tolle Sachen aus der ganzen Welt
-  new_listing: Neuer Eintrag
+  jumbotron_title: Willkommen auf Garage Sale HK!
+  jumbotron_subtitle: Möbel-Kleinanzeigen für Hong Kong
+  new_listing: Neue Anzeige
+  back: Zurück
+  edit: Ändern
+  show: Zeigen
   sold_by: Von %{user}
   will_paginate:
     previous_label: "< Zurück"
@@ -20,6 +26,7 @@ de:
   select_language: Sprache wählen
   language_eng: English
   language_de: Deutsch
+  contact_seller: Verkäufer Kontaktieren
   devise:
     sessions:
       already_signed_out: Erfolgreich abgemeldet.
@@ -256,3 +263,8 @@ de:
       long: "%A, %d. %B %Y, %H:%M Uhr"
       short: "%d. %B, %H:%M Uhr"
     pm: nachmittags
+
+  about_title: Willkommen auf Garage Sale HK!
+  about_subtitle: Möbel-Kleinanzeigen für Hong Kong  
+  about_paragraph1: Egal ob Sie aus Hong Kong wegziehen oder gerade erst angekommen sind, Garage Sale HK ist DIE Seite, um gebrauchte Möbel zu kaufen und zu verkaufen.
+  about_paragraph2: Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.

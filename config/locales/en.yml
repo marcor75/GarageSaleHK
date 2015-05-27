@@ -2,6 +2,9 @@ en:
   navbar:
     about: About
     contact: Contact
+    category_select: Browse
+    category_order: name
+    category_name: category.name
     sign_up: Sign Up
     sign_in: Sign In
     seller_account: Seller Account
@@ -10,9 +13,12 @@ en:
     shopping_history: Shopping History
     edit_profile: Edit Profile
     sign_out: Sign Out
-  jumbotron_title: Welcome to the ED Marketplace!
-  jumbotron_subtitle: Find interesting stuff from around the world
+  jumbotron_title: Welcome to Garage Sale HK!
+  jumbotron_subtitle: Buy and Sell Pre-Owned Furniture in Hong Kong
   new_listing: New Listing
+  back: Back
+  edit: Edit
+  show: Show
   sold_by: By %{user}
   will_paginate:
     previous_label: "< Previous"
@@ -20,6 +26,7 @@ en:
   select_language: Select Language
   language_eng: English
   language_de: Deutsch
+  contact_seller: Contact Seller
   date:
     abbr_day_names:
     - Sun
@@ -223,3 +230,8 @@ en:
       long: "%B %d, %Y %H:%M"
       short: "%d %b %H:%M"
     pm: pm
+
+  about_title: Welcome to Garage Sale HK!   
+  about_subtitle: Buy and Sell Pre-Owned Furniture in Hong Kong
+  about_paragraph1: Whether you're leaving Hong Kong for good or you just arrived, Garage Sale HK is THE place for you to buy or sell used furniture.
+  about_paragraph2: Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
